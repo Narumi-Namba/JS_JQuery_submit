@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>if文</title>
+    <link rel="stylesheet" type="text/css" href="base.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      // $(document).on("click", "#button", function () {
+      // $(function () {
+      $(document).on("click", "#button", function () {
+        var text = $("#value").val();
+        // alert(text);
+        if (text == "1") {
+          $("#box").toggleClass("red_color");
+          $("#box").removeClass("green_color");
+          $("#box").removeClass("blue_color");
+        } else if (text == "2") {
+          $("#box").addClass("green_color");
+          $("#box").removeClass("red_color");
+          $("#box").removeClass("blue_color");
+        } else if (text == "3") {
+          $("#box").addClass("blue_color");
+          $("#box").removeClass("red_color");
+          $("#box").removeClass("green_color");
+        } else {
+          $("#box").removeClass("red_color");
+          $("#box").removeClass("green_color");
+          $("#box").removeClass("blue_color");
+        }
+      });
+      // });
+    </script>
+  </head>
+  <body>
+    <input type="text" id="value" />
+    <input type="button" id="button" value="ボタン" />
+    <div id="box"></div>
+    <!-- button -->
+  </body>
+</html>
